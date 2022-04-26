@@ -1,5 +1,7 @@
 // Import page-specific CSS files here.
 @import "home";
+@import "favorities";
+
 .login-page{
   background-color: bisque;
   color: red;
@@ -141,6 +143,16 @@ body {
 
 .search-button:hover {
   background-color: palevioletred;
+}
+
+.favorite{
+  display: flex;
+  text-align: left;
+  font-size: 25px;
+  text-decoration: none;
+  text-shadow: #E7F3FF;
+  font-style: oblique;
+  color: sandybrown;
 }
 
 
