@@ -1,5 +1,6 @@
 <div class="banner">
   <div class="login-page">
+  <a href="http://localhost:3000/favorites" class="favorite">Your Favorite List Here</a>
     <p>Welcome <%= current_user.email%></p>
     <%= link_to "Sign out!" , destroy_user_session_path, :method=> :delete %>
 
@@ -14,7 +15,7 @@
       </div>
       <div class="search-element">
         <label class="search-label">How much is your affordable price?</label>
-        <input class="search-input" type="text" placeholder="Maximum price for living"  autocomplete="on" name="location">
+        <input class="search-input" type="text" placeholder="Maximum price for renting"  autocomplete="on" name="location">
       </div>
       <a type="submit" class="search-button">Search</a>
   </div>

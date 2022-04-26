@@ -1,0 +1,40 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.prices{
+	width: max-content;
+	height: max-content;
+
+}
+	.prices h3{
+		font-weight: 100;
+		font-size: 25px;
+		color: #484848;
+		margin-left: 5px;
+	}
+	.img{
+		display: inline-block;
+    // margin: 3% 4% 3% 2%;
+		margin: 30px 150px 50px 5px;
+	}
+	.img:last-child {
+		margin-right: 0;
+	}
+	.img img{
+		width: 301px;
+		height: 206px;
+	}
+	.price-stamp{
+		margin: -200px 0 0 12px;
+		color: #fff;
+		font-weight: 900;
+		font-size: 22px;
+		text-shadow: 0 0 6px #615e61;
+	}
+	.description{
+		margin: 180px 0 0 0;
+		font-size: 14px;
+		color: #484848;
+	}
