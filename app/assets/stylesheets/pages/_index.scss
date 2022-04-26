@@ -37,14 +37,12 @@ main {
   position: relative;
   margin: 0 auto;
 }
-footer {
-  height: 10vh;
-  background-color: #FFFFFF;
-}
+
 .form-inputs{
   flex: 0 0 50%;
   text-align: left;
 }
+
 .form-container{
   background-color: #FFFFFF;
   border: none;
@@ -83,13 +81,68 @@ input{
 
 }
 
-.p-card-title p{
-  font-style: inherit;
-  font-weight: 100;
-  font-size: 25px;
-  color: #42B72A;
-  margin-left: 5px;
+body {
+  background: whitesmoke;
+  font-family: 'Times New Roman', Times, serif;
 }
+
+.product-search {
+  display: flex;
+  align-items: center;
+  background: white;
+  margin-bottom: 15px;
+  box-shadow: gray 0 6px 12px 0;
+}
+
+.search-element {
+  display: flex;
+  flex-grow: 2;
+  flex-direction: column;
+  border-right: 1px solid gray;
+  padding: 15px;
+}
+
+.search-label {
+  font-weight: 800;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.search-input {
+  border: none;
+  appearance: none;
+  outline: none;
+  width: 100%;
+  font-size: 18px;
+  line-height: 13px;
+  margin-top: 5px;
+}
+
+.search-input:focus {
+  box-shadow: 0px 2px 0px 0px tomato;
+}
+
+.search-button {
+  display: inline-block;
+  flex-grow: 1;
+  height: 80px;
+  line-height: 80px;
+  padding: 0 18px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 100;
+  border: 0;
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  color: white;
+  background-color: tomato;
+}
+
+.search-button:hover {
+  background-color: palevioletred;
+}
+
 
 .name{
   line-break: auto;

@@ -1,17 +1,24 @@
 <div class="banner">
   <div class="login-page">
-    <p>Welcome <%= current_user.email%>
-    </p>
+    <p>Welcome <%= current_user.email%></p>
     <%= link_to "Sign out!" , destroy_user_session_path, :method=> :delete %>
 
   </div>
 
   <div class="properties">
-    <div class="p-card-title">
-      <p>Properties</p>
-      <p>Address</p>
-      <p>Description</p>
-      <p>Photos</p>
+  <form action="" method="get">
+  <div class="product-search">
+      <div class="search-element">
+        <label class="search-label">What are you looking for?</label>
+        <input class="search-input" type="text" autocomplete="on" placeholder="Property Type" name="query">
+      </div>
+      <div class="search-element">
+        <label class="search-label">How much is your affordable price?</label>
+        <input class="search-input" type="text" placeholder="Maximum price for living"  autocomplete="on" name="location">
+      </div>
+      <a type="submit" class="search-button">Search</a>
+  </div>
+</form>
     </div>
     <% @properties.each do |p| %>
       <div class="p-card">
