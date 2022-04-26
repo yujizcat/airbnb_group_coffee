@@ -5,3 +5,18 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+puts "Cleaning up database..."
+Property.destroy_all
+puts "Database cleaned"
+
+10.times do
+  airbnb = Property.create!(
+    name: "#{Faker::Name.first_name}'s #{Faker::Coffee.blend_name} Home",
+    city: "#{Faker::Address.full_address}",
+    description: Faker::Lorem.paragraphs,
+    user: User.first,
+  )
+end
+
+puts "New database created!"
