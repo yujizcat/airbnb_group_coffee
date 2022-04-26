@@ -21,9 +21,13 @@
         <h3>
           <%= p.city %>
         </h3>
-        <p>
-          <%= p.description %>
-        </p>
+
+          <p>Type: <%= p.description.split(',')[0] %></p>
+          <p>Suit for: <%= p.description.split(',')[1] %></p>
+          <p>Price: $<%= p.description.split(',')[2] %> per day</p>
+          <p>Monthly Rental: $<%= p.description.split(',')[2].to_i*p.description.split(',')[3].to_i/100*30 %> per month</p>
+          <p>Discount: <%= 100-p.description.split(',')[3].to_i %>% off!</p>
+
         <p>
           <%= image_tag "#{p.pic}", class:"card-img"%>
         </p>

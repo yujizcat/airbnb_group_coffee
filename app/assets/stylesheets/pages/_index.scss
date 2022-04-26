@@ -29,6 +29,7 @@ h2{
 h2,h3{
   text-align: center;
   padding: 10px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 main {
   height: 90vh;
@@ -74,6 +75,12 @@ input{
   width: calc(33.333333333% - 20px);
   height: 450px;
   margin: 0 10px 20px 10px;
+}
+
+.p-card p{
+  font-family: Monaco, Sans-serif;
+  color:rgba(13, 5, 99, 0.981)
+
 }
 
 .p-card-title p{
