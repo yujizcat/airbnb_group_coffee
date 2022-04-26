@@ -20,3 +20,23 @@
 .city-selector{
 
 }
+
+.properties{
+  background-color: aliceblue;
+  border: 1px, solid;
+  text-align:center;
+
+}
+
+.p-card{
+  justify-content: space-around;
+  border: 5px, solid;
+  display: flex;
+  padding:25px;
+  margin-left: 0%;
+}
+
+.p-card-title{
+  display: flex;
+  justify-content: space-around;
+}
