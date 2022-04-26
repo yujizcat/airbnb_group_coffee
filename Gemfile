@@ -33,6 +33,7 @@ gem "font-awesome-sass"
 gem "simple_form", github: "heartcombo/simple_form"
 gem "devise"
 gem "faker"
+gem "nokogiri", ">= 1.6.7.rc"
 group :development, :test do
   gem "pry-byebug"
   gem "pry-rails"

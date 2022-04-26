@@ -1,35 +1,34 @@
+// Import page-specific CSS files here.
 @import "home";
 .login-page{
   background-color: bisque;
   color: red;
   text-align-last: right;
 }
-
 .banner{
   background-color: antiquewhite;
 }
-
 .banner-pic{
   margin-bottom: 50px;
   padding: 50px;
 }
-
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
-
 body {
   font-family: 'Poppins', sans-serif;
   background-color: #F0F2F5;
   color: #1C1E21;
 }
 h2{
-  color: coral;
+  color: rgb(34, 104, 189);
+  padding: 10px;
 }
 h2,h3{
   text-align: center;
+  padding: 10px;
 }
 main {
   height: 90vh;
@@ -45,129 +44,62 @@ footer {
   flex: 0 0 50%;
   text-align: left;
 }
-.form-container {
+.form-container{
   background-color: #FFFFFF;
   border: none;
   border-radius: 10px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.1);
   margin-bottom: 30px;
   padding: 20px;
+  max-width: 400px;
 }
-
 input{
   border: 1px solid #DDDFE2;
   color: #1D2129;
   padding: 0 8px;
   outline: none;
 }
-
 .form-inputs .form-container input:focus {
   border-color: #1877F2;
   box-shadow: 0 0 0 2px #E7F3FF;
 }
 
-.form-actions{
-  width: 100%;
-  margin: 5px 0;
-  height: 45px;
-  vertical-align: middle;
-  font-size: 16px;
-  background-color: #1877f2;
-  border: none;
-  border-radius: 6px;
-  font-size: 20px;
-  padding: 0 16px;
-  color: #ffffff;
-  font-weight: 700;
-  max-width: fit-content;
-  margin-left: 46%;
+.p-card {
+  font-family: 'Times New Roman', Times, serif;
+  background-color: whitesmoke;
+  border: 1px solid #189B38;
+  padding: 30px;
+  border-radius: 5px;
+  float: left;
+  width: calc(33.333333333% - 20px);
+  height: 450px;
+  margin: 0 10px 20px 10px;
 }
 
-.btn-new{
-  flex: auto;
+.p-card-title p{
+  font-style: inherit;
+  font-weight: 100;
+  font-size: 25px;
+  color: #42B72A;
+  margin-left: 5px;
+}
+
+.name{
+  line-break: auto;
+}
+.city{
+  font-size: 15px;
+  line-break: auto;
+}
+.description{
+  font-size: 12px;
+  line-break: auto;
+}
+
+.card-img{
+  border-radius: 50px;
   text-align: center;
-  margin-right: auto;
-  align-items: center;
-  background-color: #42b72a;
-  border: none;
-  border-radius: 6px;
-  font-size: 17px;
-  line-height: 48px;
-  padding: 0 16px;
-  font-weight: 700;
-  margin-top: 20px;
-  max-width: fit-content;
-  margin-left: 42%;
-}
+  padding:20px;
+  margin-right: 70%;
 
-.form-inputs{
-  width: 100%;
-  padding: 15px;
-  margin: 5px 0 22px 0;
-  display: inline-block;
-  border: none;
-  background: #f1f1f1;
-}
-
-.form-inputs{
-  background-color: #FFFFFF;
-  border: none;
-  border-radius: 10px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.1);
-  margin-bottom: 30px;
-  padding: 20px;
-}
-
-.form-actions-new{
-  width: 100%;
-  margin: 5px 0;
-  height: 45px;
-  vertical-align: middle;
-  font-size: 16px;
-  background-color: #1877f2;
-  border: none;
-  border-radius: 6px;
-  font-size: 20px;
-  padding: 0 16px;
-  color: #ffffff;
-  font-weight: 700;
-  max-width: fit-content;
-  margin-left: 45%;
-}
-
-.btn-new-r{
-  flex: auto;
-  text-align: center;
-  margin-right: auto;
-  align-items: center;
-  background-color: #42b72a;
-  border: none;
-  border-radius: 6px;
-  font-size: 17px;
-  line-height: 48px;
-  padding: 0 16px;
-  font-weight: 700;
-  margin-top: 20px;
-  max-width: fit-content;
-  margin-left: 45%;
-}
-
-.properties{
-  background-color: aliceblue;
-  border: 1px, solid;
-  text-align:center;
-
-}
-
-.p-card{
-  justify-content: space-around;
-  border: 5px, solid;
-  display: flex;
-  padding:25px;
-  margin-left: 0%;
-}
-
-.p-card-title{
-  display: flex;
-  justify-content: space-around;
 }
