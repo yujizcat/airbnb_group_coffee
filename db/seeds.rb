@@ -10,11 +10,12 @@ puts "Cleaning up database..."
 Property.destroy_all
 puts "Database cleaned"
 
-10.times do
+30.times do
   airbnb = Property.create!(
     name: "#{Faker::Name.first_name}'s #{Faker::Coffee.blend_name} Home",
     city: "#{Faker::Address.full_address}",
     description: Faker::Lorem.paragraphs,
+    pic: "https://picsum.photos/230/130?random=#{rand(10000)}",
     user: User.first,
   )
 end

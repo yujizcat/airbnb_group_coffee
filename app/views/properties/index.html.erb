@@ -11,17 +11,21 @@
       <p>Properties</p>
       <p>Address</p>
       <p>Description</p>
+      <p>Photos</p>
     </div>
     <% @properties.each do |p| %>
       <div class="p-card">
-        <p>
+        <h2>
           <%= p.name %>
-        </p>
-        <p>
+        </h2>
+        <h3>
           <%= p.city %>
-        </p>
+        </h3>
         <p>
           <%= p.description %>
+        </p>
+        <p>
+          <%= image_tag "#{p.pic}", class:"card-img"%>
         </p>
       </div>
       <% end %>
