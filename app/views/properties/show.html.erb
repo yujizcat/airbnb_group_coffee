@@ -1,18 +1,10 @@
-
-<footer>
-  <div class="footer-copyright text-center">&copy; Developed with </i> by<a href="github" class="white-text" target="_blank">Yuji</a>.
-  </div>
-</footer>
-
 <div class="show-banner">
-  <div class="login-page">
+  <div class="login-page2">
 
-    <p>Welcome <%= current_user.email%></p>
-    <%= link_to "Sign out!" , destroy_user_session_path, :method=> :delete %>
+    <p class='hi'>Welcome <%= current_user.email%></p>
+    <br>
+   <p class='out'><%= link_to "Sign out!" , destroy_user_session_path, :method=> :delete %></p>
 
-  </div>
-  <div class="show-navbar">
-    <%= link_to 'Back' , properties_path %>
   </div>
   <div class="show-page-card">
     <div class="like">
@@ -20,12 +12,11 @@
       <%= @property.name %>
       </h1>
     </div>
-    <h2>
+    <h2 class="address2">
       <%= @property.address %>
-    </h2>
-    <h2>
       <%= @property.city %>
     </h2>
+    <div class="detail">
     <p>Type: <%= @property.description.split(',')[0] %>
     </p>
     <p>Suit for: <%= @property.description.split(',')[1] %>
@@ -33,11 +24,18 @@
     <p>Price: $<%= @property.description.split(',')[2] %> per day</p>
     <p>Monthly Rental: $<%= @property.description.split(',')[2].to_i*@property.description.split(',')[3].to_i/100*30 %> per month</p>
     <p>Discount: <%= 100-@property.description.split(',')[3].to_i %>% off!</p>
+    </div>
 
     <p>
       <%= image_tag "#{@property.pic}, :size => '200px'" , class:"card-img" %>
     </p>
-
   </div>
-
+    <div class="show-navbar">
+    <p class="linkb"><%= link_to 'Back' , properties_path %></p>
+  </div>
+<br>
+<footer>
+  <div class="footer-copyright text-center">&copy; Developed with </i> by<a href="github" class="white-text" target="_blank">Yuji</a>.
+  </div>
+</footer>
 </div>

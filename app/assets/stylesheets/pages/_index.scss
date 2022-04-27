@@ -305,3 +305,46 @@ body {
   display: flex;
   text-align: right;
 }
+
+.price-show{
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  text-shadow: #EF816C;
+}
+
+.out{
+  text-align: right;
+}
+.show-navbar{
+  text-align: right;
+  text-shadow: #1877F2;
+}
+
+.show-banner{
+  background-size: auto;
+}
+
+.like{
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.address2{
+  display: block;
+  word-break: keep-all;
+  white-space: nowrap;
+  text-align: center;
+}
+.hi{
+  color: palevioletred;
+  font-size: larger;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  text-align: center;
+}
+
+.detail{
+font-family: fantasy;
+color: darksalmon;
+text-shadow: 0.1em #EF816C;
+}
+
+.linkb{
+  text-decoration: none;
+}
