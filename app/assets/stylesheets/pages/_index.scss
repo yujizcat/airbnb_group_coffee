@@ -1,6 +1,8 @@
 // Import page-specific CSS files here.
 @import "home";
 @import "favorities";
+@import "bookings";
+@import "forms";
 
 
 li {
@@ -343,4 +345,9 @@ float: left;
 .out{
   text-align: right;
   text-decoration: none;
+}
+
+.form{
+  display: flex;
+  text-align: center;
 }
