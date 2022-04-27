@@ -10,6 +10,7 @@ ul{
   max-width: 1000px;
   justify-content: space-between;
   text-align: center;
+  margin-bottom: 50px;;
 }
 li {
   padding: 1rem 2rem 1.15rem;
@@ -53,6 +54,7 @@ li:active {
   background-color: bisque;
   color: red;
   text-align-last: right;
+  height: 500px;
 
 }
 .banner{
@@ -289,7 +291,7 @@ body {
 
 .login-page{
   display: flex;
-  height: 90px;
+  height: 40px;
 }
 
 .booking{

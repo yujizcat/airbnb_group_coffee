@@ -20,15 +20,15 @@ housing_type = ["Apartment", "Normal House", "Luxury House", "Shared Room", "Hot
 
     case type
     when "Apartment"
-      price = rand(200..1500)
+      price = rand(20..150)
     when "Normal House"
-      price = rand(300..2000)
+      price = rand(30..200)
     when "Luxury House"
-      price = rand(500..3000)
+      price = rand(50..300)
     when "Shared Room"
-      price = rand(100..1000)
+      price = rand(10..100)
     when "Hotel"
-      price = rand(400..2500)
+      price = rand(40..250)
     end
 
     people_str = "1 person"
