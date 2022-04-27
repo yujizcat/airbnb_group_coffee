@@ -286,3 +286,22 @@ body {
   display: block;
   margin: auto;
 }
+
+.login-page{
+  display: flex;
+  height: 90px;
+}
+
+.booking{
+  display: flex;
+  text-align: center;
+  font-size: 25px;
+  text-decoration: none;
+  text-shadow: #E7F3FF;
+  font-style: oblique;
+  color: sandybrown;
+}
+.bar{
+  display: flex;
+  text-align: right;
+}

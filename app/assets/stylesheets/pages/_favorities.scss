@@ -38,3 +38,15 @@
 		font-size: 14px;
 		color: #484848;
 	}
+
+ .like h1 {
+    cursor: pointer;
+  }
+.like h1:hover:after,
+.like h1.fav:after {
+    content: ' \2605';
+    color: rgb(255, 203, 0);
+  }
+.like h1.fav:hover:after {
+    content: ' \2606';
+  }

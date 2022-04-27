@@ -1,8 +1,8 @@
 <div class="banner">
   <div class="login-page">
-    <p>Welcome <%= current_user.email%>
-    </p>
+    <p class="bar">Welcome <%= current_user.email%>
     <%= link_to "Sign out!" , destroy_user_session_path, :method=> :delete %>
+    </p>
       <ul>
         <li><a href="http://localhost:3000/favorites" class="favorite">Your Favorite List Here</a></li>
         <li><a href="http://localhost:3000/bookings" class="booking">Your booking List Here</a></li>
