@@ -1,20 +1,24 @@
 <div class="banner">
   <div class="login-page">
-    <p class="bar">Welcome <%= current_user.username%>
-    <%= link_to "Sign out!" , destroy_user_session_path, :method=> :delete %>
+    <div class="bar">
+    <p>Welcome <%= current_user.username%></p>
+    <p>Email: <%= current_user.email%></p>
+    <p><%= link_to "Sign out!" , destroy_user_session_path, :method=> :delete %>
     </p>
-      <ul class="ul-bar">
-        <li><a href="http://localhost:3000/favorites" class="favorite">Your Favorite List Here</a></li>
-        <li><a href="http://localhost:3000/bookings" class="booking">Your booking List Here</a></li>
-      </ul>
   </div>
 
-
-
+  </div>
 
   <div class="city-welcome">
     <h1>Welcome to <%= @hello %>
     </h1>
+  </div>
+
+  <div class="ul-bar">
+    <ul>
+      <li><a href="http://localhost:3000/favorites" class="favorite">Your Favorite List Here</a></li>
+      <li><a href="http://localhost:3000/bookings" class="booking">Your booking List Here</a></li>
+    </ul>
   </div>
 
   <div class="properties">
