@@ -1,9 +1,12 @@
 <div class="show-banner">
+    <div class="show-navbar">
+    <p class="linkb"><%= link_to 'Back' , properties_path %></p>
+     <p class='out'><%= link_to "Sign out!" , destroy_user_session_path, :method=> :delete %></p>
+     </div>
   <div class="login-page2">
 
     <p class='hi'>Welcome <%= current_user.email%></p>
     <br>
-   <p class='out'><%= link_to "Sign out!" , destroy_user_session_path, :method=> :delete %></p>
 
   </div>
   <div class="show-page-card">
@@ -25,17 +28,15 @@
     <p>Monthly Rental: $<%= @property.description.split(',')[2].to_i*@property.description.split(',')[3].to_i/100*30 %> per month</p>
     <p>Discount: <%= 100-@property.description.split(',')[3].to_i %>% off!</p>
     </div>
-
+<div class="pic">
     <p>
       <%= image_tag "#{@property.pic}, :size => '200px'" , class:"card-img" %>
     </p>
-  </div>
-    <div class="show-navbar">
-    <p class="linkb"><%= link_to 'Back' , properties_path %></p>
+    </div>
   </div>
 <br>
+</div>
 <footer>
   <div class="footer-copyright text-center">&copy; Developed with </i> by<a href="github" class="white-text" target="_blank">Yuji</a>.
   </div>
 </footer>
-</div>
