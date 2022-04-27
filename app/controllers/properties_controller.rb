@@ -3,7 +3,6 @@ class PropertiesController < ApplicationController
 
   def index
     @properties = Property.all
-    #@properties = Property.where(:city => "Lake Leighannview")
     @hello = Property.last.city
   end
 
