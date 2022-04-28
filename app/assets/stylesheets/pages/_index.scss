@@ -3,6 +3,7 @@
 @import "favorities";
 @import "bookings";
 @import "forms";
+@import "new";
 
 
 li {
@@ -359,4 +360,20 @@ float: left;
 .form{
   display: flex;
   text-align: center;
+}
+
+.create{
+  text-decoration: none;
+  width: fit-content;
+  margin: 40px ;
+  text-align: left;
+  background-color: #4dccc6;
+background-image: linear-gradient(315deg, #4dccc6 0%, #96e4df 74%);
+  line-height: 42px;
+  padding: 0;
+  border: none;
+}
+.create:hover {
+  background-color: #89d8d3;
+background-image: linear-gradient(315deg, #89d8d3 0%, #03c8a8 74%);
 }
