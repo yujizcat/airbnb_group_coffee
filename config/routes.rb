@@ -7,7 +7,7 @@ Rails.application.routes.draw do
     resources :favorites, only: [:create]
   end
   resources :bookings
-  resources :favorites, only: [:index]
+  resources :favorites, only: [:index, :destroy]
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
   root to: "properties#index"
   #get "properties/_form", to: "properties#_form"
