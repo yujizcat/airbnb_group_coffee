@@ -1,26 +1,40 @@
-<div class="prices">
+<div class="banner">
+  <div class="login-page">
+    <div class="bar">
+    <p>Welcome <%= current_user.username%></p>
+    <p>Email: <%= current_user.email%></p>
+    <p><%= link_to "Sign out!" , destroy_user_session_path, :method=> :delete %>
+    </p>
+  </div>
 
-			<h3>Explore Airbnb picks</h3>
 
-			<div class="img"><img src="https://a2.muscache.com/im/pictures/6152848/b04eddeb_original.jpg?aki_policy=x_medium">
-				<div class="price-stamp">R$ 158</div>
-				<div class="description">
-					<h4>Loft Studio in the Central Area</h4>
-				</div>
-			</div>
 
-			<div class="img"><img src="https://a2.muscache.com/im/pictures/34792065/bae84a3f_original.jpg?aki_policy=x_medium">
-				<div class="price-stamp">$ 1399</div>
-				<div class="description">
-					<h4>Everview Suite</h4>
-				</div>
-			</div>
+  </div>
+  <p class="linkb"><%= link_to 'Back' , properties_path %></p>
+  <div class="favorite-title">
+    <h1>My Favorites</h1>
+  </div>
 
-			<div class="img"><img src="https://a2.muscache.com/im/pictures/1faf9a4c-f839-44da-bd37-65ddc928379e.jpg?aki_policy=x_medium">
-				<div class="price-stamp">$576</div>
-				<div class="description">
-					<h4>180° View, private pool villa</h4>
-				</div>
-			</div>
+  <div class="my-favorite">
+    <% @favorites.each do |f| %>
+    <div class="p-card">
+      <div class="price-show">
+        <h1>$<%= f.property.price %> Daily |
+              <%= 100-f.property.description.split(',')[3].to_i %>% off Monthly
+        </h1>
+      </div>
+      <h2>
+        <%= f.property.name %>
+      </h2>
+      <h3>
+        <%= f.property.address %>,
+        <%= f.property.city %>
+      </h3>
 
-		</div>
+      <p>
+        <%= image_tag "#{f.property.pic}" , class:"card-img"%>
+      </p>
+    </div>
+    <% end %>
+  </div>
+</div>

@@ -4,6 +4,7 @@ class FavoritesController < ApplicationController
   end
 
   def new
+    @property = Property.find(params[:property_id])
     @favorite = Favorite.new
   end
 
@@ -11,20 +12,15 @@ class FavoritesController < ApplicationController
   end
 
   def create
-    @property = Property.find(params[:list_id])
-    @favorite = Favorite.new(favorite_params)
+    @property = Property.find(params[:property_id])
+    @favorite = Favorite.new
     @favorite.property = @property
+    @favorite.user = current_user
     if @favorite.save
-      redirect_to property_path
+      redirect_to favorites_path
     else
       puts "error message => #{@property.errors.full_messages}"
       render :new
     end
-  end
-
-  private
-
-  def favorite_params
-    params.require(:favorite).permit(:property_id, :user_id)
   end
 end
