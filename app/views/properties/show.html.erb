@@ -33,10 +33,17 @@
       <%= image_tag "#{@property.pic}, :size => '200px'" , class:"card-img" %>
     </p>
     </div>
-     <li><a href="http://localhost:3000/_forms" class="form">Your Will Sumbit Your Info Here!</a></li>
+
   </div>
+
+
 <br>
+<div class="p-action">
+  <%= button_to "New", action: "new" %>
+  </div>
 </div>
+
+
 <footer>
   <div class="footer-copyright text-center">&copy; Developed with </i> by<a href="github" class="white-text" target="_blank">Yuji</a>.
   </div>

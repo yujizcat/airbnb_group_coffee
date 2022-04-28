@@ -21,19 +21,21 @@
     </ul>
   </div>
 
+  <%= link_to 'New P', new_property_path %>
+
   <div class="properties">
-    <form action="" method="get">
+    <form action="/properties" method="get">
       <div class="product-search">
         <div class="search-element">
           <label class="search-label">What are you looking for?</label>
-          <input class="search-input" type="text" autocomplete="on" placeholder="Property Type" name="query">
+          <input class="search-input" type="text" autocomplete="on" placeholder="Apartment|Normal House|Luxury House|Shared Room" name="housing_type">
         </div>
         <div class="search-element">
           <label class="search-label">How much is your affordable price?</label>
           <input class="search-input" type="text" placeholder="Maximum price for renting" autocomplete="on"
-            name="location">
+            name="price">
         </div>
-        <a type="submit" class="search-button">Search</a>
+        <input type="submit" class="search-button"></a>
       </div>
     </form>
   </div>
@@ -43,7 +45,7 @@
         <%= link_to "Take a Look" , p %>
       </h2>
       <div class="price-show">
-        <h1>$<%= p.description.split(',')[2] %> Daily |
+        <h1>$<%= p.price %> Daily |
               <%= 100-p.description.split(',')[3].to_i %>% off Monthly
         </h1>
       </div>
