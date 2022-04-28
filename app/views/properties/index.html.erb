@@ -20,8 +20,9 @@
       <li><a href="http://localhost:3000/bookings" class="booking">Your booking List Here</a></li>
     </ul>
   </div>
-
-  <%= link_to 'New P', new_property_path %>
+<p class='create'>
+  <%= link_to 'New Property', new_property_path %>
+  </p>
 
   <div class="properties">
     <form action="/properties" method="get">
