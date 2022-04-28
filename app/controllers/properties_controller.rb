@@ -3,7 +3,6 @@ class PropertiesController < ApplicationController
 
   def index
     @properties = Property.all
-    #@properties = Property.where("price > ?", 100)
 
     if params[:price].present?
       @properties = @properties.where("price <= ?", params[:price])

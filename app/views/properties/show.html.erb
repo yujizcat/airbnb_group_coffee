@@ -39,7 +39,8 @@
 
 <br>
 <div class="p-action">
-  <%= button_to "New", action: "new" %>
+  <%= button_to "Add to my favorite list", property_favorites_path(@property.id) %>
+  <%= button_to "Book it!", action: "new" %>
   </div>
 </div>
 

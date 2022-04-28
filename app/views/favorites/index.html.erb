@@ -1,0 +1,39 @@
+<div class="banner">
+  <div class="login-page">
+    <div class="bar">
+    <p>Welcome <%= current_user.username%></p>
+    <p>Email: <%= current_user.email%></p>
+    <p><%= link_to "Sign out!" , destroy_user_session_path, :method=> :delete %>
+    </p>
+  </div>
+
+
+
+  </div>
+  <p class="linkb"><%= link_to 'Back' , properties_path %></p>
+  <div class="favorite-title">
+    <h1>My Favorites</h1>
+  </div>
+
+  <div class="my-favorite">
+    <div class="p-card">
+      <div class="price-show">
+        <h1>$<%= f.property.price %> Daily |
+              <%= 100-f.property.description.split(',')[3].to_i %>% off Monthly
+        </h1>
+      </div>
+      <h2>
+        <%= f.property.name %>
+      </h2>
+      <h3>
+        <%= f.property.address %>,
+        <%= f.property.city %>
+      </h3>
+
+      <p>
+        <%= image_tag "#{f.property.pic}" , class:"card-img"%>
+      </p>
+    </div>
+    <% end %>
+  </div>
+</div>

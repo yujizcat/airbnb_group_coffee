@@ -3,10 +3,12 @@ Rails.application.routes.draw do
   match "users/:id" => "users#destroy", :via => :delete, :as => :admin_destroy_user
   # match "users/:id" => "users#show", as: :user
   # resources :users
-  resources :properties
+  resources :properties do
+    resources :favorites, only: [:create]
+  end
   resources :bookings
-  resources :favorites
+  resources :favorites, only: [:index]
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
   root to: "properties#index"
-  get "properties/_form", to: "properties#_form"
+  #get "properties/_form", to: "properties#_form"
 end
