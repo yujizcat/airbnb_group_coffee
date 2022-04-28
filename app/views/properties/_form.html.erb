@@ -6,7 +6,15 @@
     <%= f.input :name %>
     <%= f.input :address %>
     <%= f.input :city %>
-    <%= f.input :housing_type %>
+    <div class="search-element">
+      <label for="housing_type">Choose a housing type:</label>
+      <select name="housing_type" id="housing_type">
+        <option value="Apartment">Apartment</option>
+        <option value="Normal House">Normal House</option>
+        <option value="Luxury House">Luxury House</option>
+        <option value="Shared Room">Shared Room</option>
+      </select>
+    </div>
     <%= f.input :price %>
   </div>
 

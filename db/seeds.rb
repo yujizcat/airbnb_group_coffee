@@ -7,7 +7,11 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 puts "Cleaning up database..."
+
+Booking.destroy_all
+Favorite.destroy_all
 Property.destroy_all
+
 puts "Database cleaned"
 
 housing_type = ["Apartment", "Normal House", "Luxury House", "Shared Room", "Hotel"]
@@ -46,6 +50,7 @@ housing_type = ["Apartment", "Normal House", "Luxury House", "Shared Room", "Hot
       address: "#{Faker::Address.street_address}",
       housing_type: type,
       price: price,
+      discount: discount,
       description: "#{type},#{people_str},#{price},#{discount}",
       pic: "https://picsum.photos/230/130?random=#{rand(10000)}",
       user: User.first,

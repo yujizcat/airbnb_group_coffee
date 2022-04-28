@@ -22,8 +22,11 @@ class PropertiesController < ApplicationController
 
   def create
     @property = Property.new(property_params)
+    @property.discount = 100
+    @property.pic = ""
+    @property.user = current_user
     if @property.save
-      refirect_to property_path(@property)
+      redirect_to properties_path(@property)
     else
       render :new
     end
@@ -41,6 +44,6 @@ class PropertiesController < ApplicationController
   end
 
   def property_params
-    params.require(:property).permit(:name, :city, :address, :description, :pic)
+    params.require(:property).permit(:name, :city, :address, :description, :pic, :price, :housing_type)
   end
 end

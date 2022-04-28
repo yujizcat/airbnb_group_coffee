@@ -1,35 +1,45 @@
-<body>
-<div class="guidebooks">
+<div class="banner">
+  <div class="login-page">
+    <div class="bar">
+    <p>Welcome <%= current_user.username%></p>
+    <p>Email: <%= current_user.email%></p>
+    <p><%= link_to "Sign out!" , destroy_user_session_path, :method=> :delete %>
+    </p>
+  </div>
 
-			<h3>Meet Your Orders</h3>
-			<div class="img-box">
-				<img class="img-big" src="https://a2.muscache.com/ac/pictures/2a4e63c3-c981-4cbc-9c37-80a6ab3a9d24.jpg?interpolation=lanczos-none&size=x_medium&output-format=jpg&output-quality=70">
-				<img class="img-small" src="https://a0.muscache.com/airbnb/guidebook/v1_san_francisco_food_scene_carousel@2x.jpg">
-				<img class="img-small" src="https://a1.muscache.com/airbnb/guidebook/v1_san_francisco_drinks_nightlife_carousel@2x.jpg">
+  </div>
+  <p class="linkb"><%= link_to 'Back' , properties_path %></p>
+  <div class="favorite-title">
+    <h1>My Booking</h1>
+  </div>
 
-				<h4>Curt's Brooklyn Light Apartment</h4>
-				<p>$1162 Daily<p>
-			</div>
+  <div class="my-favorite">
+    <% @bookings.each do |b| %>
 
+    <div class="p-card" style="height:500px">
+      <div class="p-card-action">
+      <h3><%= link_to 'Cancel', booking_path(b), method: :delete, data: { confirm: 'Cancel?' } %></h3>
+      <h3><%= link_to "View", property_path(b.property&.id) %></h3>
+    </div>
 
-			<div class="img-box">
-				<img class="img-big" src="https://a2.muscache.com/ac/pictures/cf3b9363-34e4-4532-b051-6a7663410854.jpg?interpolation=lanczos-none&size=x_medium&output-format=jpg&output-quality=70">
-				<img class="img-small" src="https://a1.muscache.com/airbnb/guidebook/v1_new_york_food_scene_carousel@2x.jpg">
-				<img class="img-small" src="https://a0.muscache.com/airbnb/guidebook/v1_new_york_drinks_nightlife_carousel@2x.jpg">
+      <h2>
+        <%= b.property.name %>
+      </h2>
+      <h3>
+        <%= b.property.address %>,
+        <%= b.property.city %>
+      </h3>
 
-				<h4>Nick's Reg's Choice Shared Room</h4>
-				<p>$233 Daily</p>
-			</div>
+      <p>
+        <%= image_tag "#{b.property.pic}" , class:"card-img"%>
+      </p>
 
+      <h3>
+        <%= b.name %>
+      </h3>
+      <p><%= b.content %></p>
+    </div>
+    <% end %>
+  </div>
 
-			<div class="img-box">
-				<img class="img-big" src="https://a2.muscache.com/ac/pictures/b62aa572-cf0b-4e4a-b886-a039a0250cf3.jpg?interpolation=lanczos-none&size=x_medium&output-format=jpg&output-quality=70">
-				<img class="img-small" src="https://a1.muscache.com/airbnb/guidebook/v1_london_food_scene_carousel@2x.jpg">
-				<img class="img-small" src="https://a2.muscache.com/airbnb/guidebook/v1_london_drinks_nightlife_carousel@2x.jpg">
-
-				<h4>Ellsworth's Reg's Equinox Shared Room</h4>
-				<p>$636 Daily</p>
-			</div>
-
-		</div>
-</body>
+</div>
