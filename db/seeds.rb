@@ -44,6 +44,8 @@ housing_type = ["Apartment", "Normal House", "Luxury House", "Shared Room", "Hot
       name: "#{Faker::Name.first_name}'s #{Faker::Coffee.blend_name} #{type}",
       city: current_city,
       address: "#{Faker::Address.street_address}",
+      housing_type: type,
+      price: price,
       description: "#{type},#{people_str},#{price},#{discount}",
       pic: "https://picsum.photos/230/130?random=#{rand(10000)}",
       user: User.first,
