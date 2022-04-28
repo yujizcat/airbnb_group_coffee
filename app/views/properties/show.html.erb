@@ -20,17 +20,19 @@
       <%= @property.city %>
     </h2>
     <div class="detail">
-    <p>Type: <%= @property.description.split(',')[0] %>
+    <p>Type: <%= @property.housing_type %>
     </p>
-    <p>Suit for: <%= @property.description.split(',')[1] %>
-    </p>
-    <p>Price: $<%= @property.description.split(',')[2] %> per day</p>
-    <p>Monthly Rental: $<%= @property.description.split(',')[2].to_i*@property.description.split(',')[3].to_i/100*30 %> per month</p>
-    <p>Discount: <%= 100-@property.description.split(',')[3].to_i %>% off!</p>
+
+
+    <p>Price: $<%= @property.price %> per day</p>
+    <p>Monthly Rental: $<%= @property.price.to_i*@property.discount.to_i/100*30 %> per month</p>
+    <p>Discount: <%= 100-@property.discount.to_i %>% off!</p>
     </div>
 <div class="pic">
     <p>
+      <% if @property.pic.present? %>
       <%= image_tag "#{@property.pic}, :size => '200px'" , class:"card-img" %>
+    <% end %>
     </p>
     </div>
 
@@ -40,10 +42,9 @@
 <br>
 <div class="p-action">
   <%= button_to "Add to my favorite list", property_favorites_path(@property.id) %>
-  <%= button_to "Book it!", action: "new" %>
+  <%= button_to "Booking it!", new_property_booking_path(@property.id), method: :get %>
   </div>
 </div>
-
 
 <footer>
   <div class="footer-copyright text-center">&copy; Developed with </i> by<a href="github" class="white-text" target="_blank">Yuji</a>.

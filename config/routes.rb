@@ -5,8 +5,9 @@ Rails.application.routes.draw do
   # resources :users
   resources :properties do
     resources :favorites, only: [:create]
+    resources :bookings, only: [:create, :new]
   end
-  resources :bookings
+  resources :bookings, only: [:index, :destroy]
   resources :favorites, only: [:index, :destroy]
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
   root to: "properties#index"

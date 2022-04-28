@@ -16,10 +16,12 @@
 
   <div class="ul-bar">
     <ul>
-      <li><a href="http://localhost:3000/favorites" class="favorite">Your Favorite List Here</a></li>
-      <li><a href="http://localhost:3000/bookings" class="booking">Your booking List Here</a></li>
+      <li><%= link_to 'Your Favorite List Here' , favorites_path, class:"favorite" %></li>
+      <li><%= link_to 'Your Booking List Here' , bookings_path, class:"favorite" %></li>
+
     </ul>
   </div>
+
 <p class='create'>
   <%= link_to 'New Property', new_property_path %>
   </p>
@@ -28,14 +30,20 @@
     <form action="/properties" method="get">
       <div class="product-search">
         <div class="search-element">
-          <label class="search-label">What are you looking for?</label>
-          <input class="search-input" type="text" autocomplete="on" placeholder="Apartment|Normal House|Luxury House|Shared Room" name="housing_type">
+          <label for="housing_type">Choose a housing type:</label>
+          <select name="housing_type" id="housing_type">
+            <option value="Apartment">Apartment</option>
+            <option value="Normal House">Normal House</option>
+            <option value="Luxury House">Luxury House</option>
+            <option value="Shared Room">Shared Room</option>
+          </select>
         </div>
         <div class="search-element">
           <label class="search-label">How much is your affordable price?</label>
           <input class="search-input" type="text" placeholder="Maximum price for renting" autocomplete="on"
             name="price">
         </div>
+
         <input type="submit" class="search-button"></a>
       </div>
     </form>
@@ -46,8 +54,8 @@
         <%= link_to "Take a Look" , p %>
       </h2>
       <div class="price-show">
-        <h1>$<%= p.price %> Daily |
-              <%= 100-p.description.split(',')[3].to_i %>% off Monthly
+        <h1>$<%= p.price %> Daily | <%= p.discount %> Off Monthly
+
         </h1>
       </div>
       <h2>
