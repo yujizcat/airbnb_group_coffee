@@ -2,7 +2,6 @@
 @import "home";
 @import "favorities";
 @import "bookings";
-@import "forms";
 @import "new";
 
 
@@ -124,20 +123,21 @@ input{
 
 .p-card {
   font-family: 'Times New Roman', Times, serif;
-  background-color: whitesmoke;
-  border: 1px solid #189B38;
+  background-color: rgb(221, 232, 196);
+  border: 2px solid #eaf75e;
   padding: 10px;
-  border-radius: 5px;
+  border-radius: 20%;
   float: left;
   width: calc(33.333333333% - 20px);
   height: 365px;
-  margin: 0 10px 20px 10px;
+  margin: 5px 10px 20px 10px;
 }
 
-.p-card p{
+.p-card h2{
   font-family: Monaco, Sans-serif;
-  color:rgba(13, 5, 99, 0.981);
+  color:white;
 }
+
 
 .p-action{
   padding:30px;
@@ -220,7 +220,6 @@ body {
   flex-grow: 2;
   width: 110%;
   flex-direction: column;
-  border-right: 1px solid gray;
   padding: 15px;
 }
 
@@ -371,7 +370,6 @@ float: left;
   text-decoration: none;
   width: fit-content;
   margin: 40px ;
-  text-align: left;
   background-color: #4dccc6;
 background-image: linear-gradient(315deg, #4dccc6 0%, #96e4df 74%);
   line-height: 42px;
@@ -386,4 +384,61 @@ background-image: linear-gradient(315deg, #89d8d3 0%, #03c8a8 74%);
 .favorite{
   text-decoration: none !important;
   font-family: 'Courier New', Courier, monospace;
+}
+
+a {
+  text-decoration: none;
+}
+
+.p-action4{
+  width: fit-content;
+  margin-top: 8%;
+  margin-left: 40%;
+}
+
+.p-action4 :hover{
+  color: rgb(221, 36, 202);
+}
+
+.ul-bar{
+  display: inline-block;
+  margin-top: 5px;
+}
+
+// .create{
+//   padding: 5px;
+// font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+// }
+
+.creating{
+  margin: 36%;
+  margin-top: 10px;
+}
+
+.creating{
+  position: relative;
+  max-width: 642px;
+  width: 100%;
+  margin: auto;
+  padding: 40px;
+  overflow: hidden;
+  background-size: cover;
+  border-radius: 5px;
+  z-index: 20
+}
+
+.emoji{
+  font-size: 25px;
+}
+
+
+.white-text{
+  border: none;
+  color: #000;
+  font-size: larger;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.white-text:hover{
+  color: #4dccc6;
 }
