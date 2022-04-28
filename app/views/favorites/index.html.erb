@@ -18,7 +18,7 @@
     <div class="p-card">
       <div class="p-card-action">
       <h3><%= link_to 'Delete', favorite_path(f), method: :delete, data: { confirm: 'Delete?' } %></h3>
-      <h3><%= link_to "View", property_path(f.property.id) %></h3>
+      <h3><%= link_to "View", property_path(f.property&.id) %></h3>
     </div>
       <div class="price-show">
         <h1>$<%= f.property.price %>
