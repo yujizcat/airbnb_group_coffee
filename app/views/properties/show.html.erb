@@ -10,6 +10,11 @@
 
   </div>
   <div class="show-page-card">
+    <h2 class="p-star">
+      <% @property.star.times do %>
+      <%= "⭐" %>
+      <% end %>
+    </h2>
     <div class="like">
     <h1>
       <%= @property.name %>

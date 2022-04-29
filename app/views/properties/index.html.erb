@@ -1,13 +1,16 @@
 <div class="banner">
   <div class="login-page">
     <div class="bar">
-    <ul>
-    <li>Welcome👏<%= current_user.username%>👏</li>
-    <li>📧:<%= current_user.email%></li>
-    <li><%= link_to "Sign out!" , destroy_user_session_path, :method=> :delete %></li>
-    </ul>
+      <ul>
+        <li>Welcome👏<%= current_user.username%>👏</li>
+        <li>📧:<%= current_user.email%>
+        </li>
+        <li>
+          <%= link_to "Sign out!" , destroy_user_session_path, :method=> :delete %>
+        </li>
+      </ul>
+    </div>
   </div>
-</div>
 
   <div class="city-welcome">
     <h1>Welcome to <%= @hello %>
@@ -16,13 +19,19 @@
 
   <div class="ul-bar">
     <ul>
-    <ul class="inline">
-      <li><%= link_to 'Your Favorite List Here' , favorites_path, class:"favorite" %></li>
-      <li><%= link_to 'Your Booking List Here' , bookings_path, class:"favorite" %></li>
+      <ul class="inline">
+        <li>
+          <%= link_to 'Your Favorite List Here' , favorites_path, class:"favorite" %>
+        </li>
+        <li>
+          <%= link_to 'Your Booking List Here' , bookings_path, class:"favorite" %>
+        </li>
+      </ul>
+      <li class="create">
+        <%= link_to 'New Property' , new_property_path %>
+      </li>
     </ul>
-    <li class="create"><%= link_to 'New Property', new_property_path %></li>
-    </ul>
- </div>
+  </div>
 
   <div class="properties">
     <form action="/properties" method="get">
@@ -30,11 +39,11 @@
         <div class="search-element">
           <label for="housing_type">Choose a housing type:</label>
           <select name="housing_type" id="housing_type">
-          <ul class="min-options">
-            <option value="Apartment">Apartment</option>
-            <option value="Normal House">Normal House</option>
-            <option value="Luxury House">Luxury House</option>
-            <option value="Shared Room">Shared Room</option>
+            <ul class="min-options">
+              <option value="Apartment">Apartment</option>
+              <option value="Normal House">Normal House</option>
+              <option value="Luxury House">Luxury House</option>
+              <option value="Shared Room">Shared Room</option>
             </ul>
           </select>
         </div>
@@ -53,44 +62,56 @@
       <h1>Browse Properties
       </h1>
     </div>
-  <% @properties.each do |p| %>
-    <div class="p-card">
-      <h2 class="show-name">
-        <div class="emoji"><%= link_to "👉" , p %></div>
-      </h2>
+    <% @properties.each do |p| %>
+      <div class="p-card">
+        <h2 class="show-name">
+          <div class="emoji">
+            <%= link_to "👉" , p %>
+          </div>
+        </h2>
 
-      <h2>
-        <%= p.name %>
-      </h2>
-      <h3>
-        <%= p.address %>,
-        <%= p.city %>
-      </h3>
+        <h3 class="p-star">
+          <% p.star.times do %>
+            <%= "⭐" %>
+              <% end %>
+        </h3>
+        <h2>
+          <%= p.name %>
+        </h2>
+        <h3>
+          <%= p.address %>,
+            <%= p.city %>
+        </h3>
 
 
 
 
-      <p>
-        <% if p.pic.present? %>
-        <%= image_tag "#{p.pic}" , class:"card-img"%>
-        <% end %>
-      </p>
-      <p>
-      <% if p.user==current_user %>
-          <h1 style="color:red"></h1>
-      <% else %>
-      <h1><%= "This is #{p.user.username}'s' property!!!" %></h1>
+        <p>
+          <% if p.pic.present? %>
+            <%= image_tag "#{p.pic}" , class:"card-img"%>
+              <% end %>
+        </p>
+        <p>
+          <% if p.user==current_user %>
+            <h1 style="color:red"></h1>
+            <% else %>
+              <h1>
+                <%= "This is #{p.user.username}'s' property!!!" %>
+              </h1>
+              <% end %>
+        </p>
+        <div class="price-show">
+          <h1>$<%= p.price %> Daily | <%= 100-p.discount.to_i %>% Off Monthly
+          </h1>
+        </div>
+        <div class="booked">
+          <% if p.booked==1 %>
+          <h1>Already Booked</h1>
+          <% end %>
+        </div>
+      </div>
+
       <% end %>
-    </p>
-    <div class="price-show">
-      <h1>$<%= p.price %> Daily | <%= 100-p.discount.to_i %>% Off Monthly
-
-
-    </h1>
-  </div>
-    </div>
-
-    <% end %>
   </div>
 
 

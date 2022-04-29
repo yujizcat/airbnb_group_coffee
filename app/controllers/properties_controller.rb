@@ -32,11 +32,6 @@ class PropertiesController < ApplicationController
     end
   end
 
-  def button
-    @properties = Property.where(:city => "Lake Leighannview")
-    redirect_to properties_url
-  end
-
   private
 
   def set_property

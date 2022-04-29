@@ -53,6 +53,8 @@ housing_type = ["Apartment", "Normal House", "Luxury House", "Shared Room", "Hot
       discount: discount,
       description: "#{type},#{people_str},#{price},#{discount}",
       pic: "https://picsum.photos/230/130?random=#{rand(10000)}",
+      star: rand(1..5),
+      booked: 0,
       user: User.first,
     )
   end
