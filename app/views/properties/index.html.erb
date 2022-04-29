@@ -46,17 +46,17 @@
       </div>
     </form>
   </div>
+  <div class="property-display">
+    <div class="city-welcome">
+      <h1>Browse Properties
+      </h1>
+    </div>
   <% @properties.each do |p| %>
     <div class="p-card">
       <h2 class="show-name">
         <div class="emoji"><%= link_to "👉" , p %></div>
       </h2>
-      <div class="price-show">
-          <h1>$<%= p.price %> Daily | <%= 100-p.discount.to_i %>% Off Monthly
 
-
-        </h1>
-      </div>
       <h2>
         <%= p.name %>
       </h2>
@@ -75,13 +75,21 @@
       </p>
       <p>
       <% if p.user==current_user %>
-          <h1 style="color:red">This is My property!!!</h1>
+          <h1 style="color:red"></h1>
       <% else %>
       <h1><%= "This is #{p.user.username}'s' property!!!" %></h1>
       <% end %>
     </p>
+    <div class="price-show">
+      <h1>$<%= p.price %> Daily | <%= 100-p.discount.to_i %>% Off Monthly
+
+
+    </h1>
+  </div>
     </div>
+
     <% end %>
+  </div>
 
 
 </div>

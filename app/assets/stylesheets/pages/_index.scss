@@ -52,7 +52,8 @@ li:active {
 }
 
 .banner{
-  background-color: antiquewhite;
+  background-color: rgb(201, 235, 233);
+  justify-content: center;
 }
 .banner-pic{
   margin-bottom: 50px;
@@ -123,21 +124,33 @@ input{
   font-family:Verdana, Geneva, Tahoma, sans-serif
 }
 
+.property-display{
+  padding: 120px;
+  justify-content: space-around;
+  background-color: #03c8a8;
+
+}
+
 .p-card {
   font-family: 'Times New Roman', Times, serif;
-  background-color: rgb(221, 232, 196);
+  background-color: rgb(247, 241, 193);
   border: 2px solid #eaf75e;
-  padding: 10px;
-  border-radius: 20%;
+  padding: 40px;
+  border-radius: 10%;
   float: left;
-  width: calc(33.333333333% - 20px);
-  height: 365px;
-  margin: 5px 10px 20px 10px;
+  //width: calc(33.333333333% - 70px);
+  width: 500px;
+  height: 500px;
+  margin: 30px 50px 80px 80px;
 }
 
 .p-card h2{
   font-family: Monaco, Sans-serif;
-  color:white;
+  color:rgb(75, 75, 232);
+}
+
+.property-display :hover{
+  background-color: #f5c4b2;
 }
 
 
@@ -404,6 +417,7 @@ a {
 .ul-bar{
   display: inline-block;
   margin-top: 5px;
+  margin-left: 35%;
 }
 
 // .create{
@@ -445,6 +459,7 @@ a {
 }
 
 .bar{
+
    position: relative;
   z-index: 2;
   padding: 1.25rem 0 1.25rem 0;
