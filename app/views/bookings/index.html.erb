@@ -1,6 +1,6 @@
 <div class="banner">
   <div class="login-page">
-    <div class="bar">
+    <div class="barb">
     <p>Welcome <%= current_user.username%></p>
     <p>Email: <%= current_user.email%></p>
     <p><%= link_to "Sign out!" , destroy_user_session_path, :method=> :delete %>
@@ -18,8 +18,8 @@
 
     <div class="p-card" style="height:500px">
       <div class="p-card-action">
-      <h3><%= link_to 'Cancel', booking_path(b), method: :delete, data: { confirm: 'Cancel?' } %></h3>
-      <h3><%= link_to "View", property_path(b.property&.id) %></h3>
+      <h3><%= link_to '✖️', booking_path(b), method: :delete, data: { confirm: 'Cancel?' } %></h3>
+      <h3><%= link_to "👉", property_path(b.property&.id) %></h3>
     </div>
 
       <h2>

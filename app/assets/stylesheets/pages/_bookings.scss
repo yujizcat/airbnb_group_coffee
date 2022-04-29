@@ -57,3 +57,20 @@
   margin: 36%;
   margin-top: 10px;
 }
+
+.barb{
+  position: relative;
+ z-index: 2;
+ padding: 1.25rem 0 1.25rem 0;
+ margin-right: 2%;
+ ul {
+   line-height: 2.2;
+   display: flex;
+   justify-content: flex-start;
+   li {
+     display: inline-block;
+     margin: 0.325rem 0;
+     color: #03c8a8;
+   }
+ }
+}
