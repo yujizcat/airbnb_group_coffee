@@ -44,13 +44,13 @@ li:active {
 }
 
 .login-page{
+  text-align: right;
   background-color: bisque;
-  color: red;
   text-align-last: right;
   justify-content:right;
-  height: 500px;
-
+  height: fit-content;
 }
+
 .banner{
   background-color: antiquewhite;
 }
@@ -112,10 +112,12 @@ input{
 .city-welcome
 {
   height: 200px;
-  margin-left:25%;
+  margin-left:6%;
 }
 
 .city-welcome h1{
+  display: flexbox;
+  text-align: center;
   font-size: 50px;
   padding: 50px;
   font-family:Verdana, Geneva, Tahoma, sans-serif
@@ -279,6 +281,7 @@ body {
 }
 
 
+
 .name{
   line-break: auto;
 }
@@ -299,10 +302,10 @@ body {
   margin: auto;
 }
 
-.login-page{
-  display: flex;
-  height: 40px;
-}
+// .login-page{
+//   display: flex;
+//   height: 40px;
+// }
 
 .booking{
   display: flex;
@@ -313,11 +316,7 @@ body {
   font-style: oblique;
   color: sandybrown;
 }
-.bar{
-  display:grid;
-  text-align-last: right;
-  justify-content: right;
-}
+
 
 .price-show{
   font-family: Georgia, 'Times New Roman', Times, serif;
@@ -394,6 +393,8 @@ a {
   width: fit-content;
   margin-top: 8%;
   margin-left: 40%;
+  background-color: #EF816C;
+  border-radius: 11%;
 }
 
 .p-action4 :hover{
@@ -441,4 +442,21 @@ a {
 
 .white-text:hover{
   color: #4dccc6;
+}
+
+.bar{
+   position: relative;
+  z-index: 2;
+  padding: 1.25rem 0 1.25rem 0;
+  margin-right: 2%;
+  ul {
+    line-height: 2.2;
+    display: flex;
+    justify-content: flex-start;
+    li {
+      display: inline-block;
+      margin: 0.325rem 0;
+      color: #03c8a8;
+    }
+  }
 }
