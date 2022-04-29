@@ -344,9 +344,9 @@ input{
 
     .detail{
       font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-      color: darksalmon;
+      color: rgb(85, 39, 23);
       text-shadow: 0.1em #EF816C;
-      float: left;
+      text-align: center;
     }
 
     .pic{
@@ -394,8 +394,8 @@ input{
     .p-action4{
       width: 378px;
       padding: 50px;
-      margin-top: 8%;
-      margin-left: 40%;
+      margin-top: 2%;
+      margin-left: 32%;
     //   background-color: #EF816C;
       // border-radius: 11%;
     }
