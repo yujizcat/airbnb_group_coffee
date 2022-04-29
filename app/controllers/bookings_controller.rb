@@ -15,6 +15,7 @@ class BookingsController < ApplicationController
     @property = Property.find(params[:property_id])
     @booking = Booking.new(booking_params)
     @booking.property = @property
+    @booking.property.booked = 1
     @booking.user = current_user
     if @booking.save
       redirect_to bookings_path
@@ -26,6 +27,7 @@ class BookingsController < ApplicationController
 
   def destroy
     @booking = Booking.find(params[:id])
+    @booking.property.booked = 0
     @booking.destroy
     redirect_to bookings_path
   end
