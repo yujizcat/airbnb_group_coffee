@@ -1,4 +1,4 @@
-<body>
+<div class="signin-page">
   <div class="head">
   <h2>Weclome to the Airbnb-GroupCoffe!</h2>
   <h3><em>Please log in</em></h3>
@@ -16,12 +16,12 @@
                   input_html: { autocomplete: "current-password" } %>
       <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
       </div>
+    <div class="backnew">
+      <p class="center"><%= f.button :submit, "Log in" %></p>
     </div>
-    <div class="form-actions">
-      <%= f.button :submit, "Log in" %>
-    </div>
+  </div>
   <% end %>
-  <br>
+  <div class="message">
   <%= render "devise/shared/links" %>
-
-  </body>
+</div>
+  </div>

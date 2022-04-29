@@ -16,10 +16,12 @@
 
   <div class="ul-bar">
     <ul>
+    <ul class="inline">
       <li><%= link_to 'Your Favorite List Here' , favorites_path, class:"favorite" %></li>
       <li><%= link_to 'Your Booking List Here' , bookings_path, class:"favorite" %></li>
-  <li class="create"><%= link_to 'New Property', new_property_path %></li>
-  </ul>
+    </ul>
+    <li class="create"><%= link_to 'New Property', new_property_path %></li>
+    </ul>
  </div>
 
   <div class="properties">
