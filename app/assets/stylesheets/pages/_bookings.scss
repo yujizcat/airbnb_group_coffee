@@ -1,50 +1,59 @@
+.formbooking{
+  text-align: center;
+  font-family: 'Lato', 'sans-serif';
+  font-weight: 400;
 
-
-.guidebooks{
-	display: block;
-  background-color: aquamarine;
+}
+.formbooking input{
+  padding: 12px;
+  font-size: 14px;
+  border: 1px solid #c6c6c6;
+  width: 100%;
+  margin-bottom: 18px;
+  color: #888;
+  font-family: 'Lato', 'sans-serif';
+  font-size: 16px;
+  font-weight: 300;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+  -moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
 }
 
-.guidebooks h3{
-	font-weight: 100;
-	font-size: 25px;
-	color: #484848;
-	margin-left: 5px;
+.formbooking:hover{
+  color: sandybrown;
 }
-.img-box{
-	float: left;
-	width: 305px;
-	height: 205px;
-	margin: 40px 30px 0 25px;
-  background-color: sandybrown;
+
+.backgroundimg{
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+	height: 100vh;
 }
-.img-box:last-child{
-	margin-right: 0;
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
 }
-.img-box h4{
-	font-size: 14px;
-	color: #484848;
-	float: left;
-	margin: 5px 5px 0 0;
+
+.text2{
+  color: #ee7752;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
-.img-box h4 spam{
-	margin-left: -1px;
-}
-.img-box p{
-	font-size: 14px;
-	color: #484848;
-	margin-top: 5px;
-	float: left;
-}
-.img-big {
-	float: left;
-	margin-top: 3px;
-	width: 200px;
-  height: 163px;
-}
-.img-small {
-	float: right;
-	width: 100px;
-	height: 80px;
-	margin-top: 3px;
+
+.formbooking{
+  width: 346px;
+	height: 626px;
+  margin: 36%;
+  margin-top: 10px;
 }
