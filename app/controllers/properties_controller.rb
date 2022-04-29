@@ -23,6 +23,8 @@ class PropertiesController < ApplicationController
   def create
     @property = Property.new(property_params)
     @property.discount = 100
+    @property.star = 0
+    @property.booked = 0
     @property.pic = ""
     @property.user = current_user
     if @property.save

@@ -16,9 +16,9 @@ puts "Database cleaned"
 
 housing_type = ["Apartment", "Normal House", "Luxury House", "Shared Room", "Hotel"]
 
-100.times do
+3.times do
   current_city = Faker::Address.city
-  3.times do
+  rand(1..5).times do
     type = housing_type.sample
     price = 0
 
