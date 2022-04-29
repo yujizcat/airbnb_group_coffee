@@ -46,12 +46,12 @@
 
 <br>
 <div class="p-action4">
-  <%= button_to "Add to my favorite list ♥️", property_favorites_path(@property.id) %>
-  <%= button_to "Booking it!🖱", new_property_booking_path(@property.id), method: :get %>
+  <%= button_to "Add to my favorite list ♥️", property_favorites_path(@property.id),class:"myClass" %>
+  <%= button_to "Booking it!🖱", new_property_booking_path(@property.id), method: :get,class:"myClass" %>
   </div>
 </div>
 
 <footer>
-  <div class="footer-copyright text-center">&copy; Developed 💻 </i> by<a href="github" class="white-text" target="_blank">Yuji and Ethan</a>.
+  <div class="footer-copyright text-center">&copy; Developed 💻 </i> by<a href="https://github.com/yujizcat/airbnb_group_coffee" class="white-text" target="_blank">Yuji and Ethan</a>.
   </div>
 </footer>
