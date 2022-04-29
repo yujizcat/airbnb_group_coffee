@@ -1,13 +1,13 @@
 <div class="banner">
   <div class="login-page">
     <div class="bar">
-    <p>Welcome <%= current_user.username%></p>
-    <p>Email: <%= current_user.email%></p>
-    <p><%= link_to "Sign out!" , destroy_user_session_path, :method=> :delete %>
-    </p>
+    <ul>
+    <li>Welcome👏<%= current_user.username%>👏</li>
+    <li>📧:<%= current_user.email%></li>
+    <li><%= link_to "Sign out!" , destroy_user_session_path, :method=> :delete %></li>
+    </ul>
   </div>
-
-  </div>
+</div>
 
   <div class="city-welcome">
     <h1>Welcome to <%= @hello %>
